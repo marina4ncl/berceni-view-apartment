@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartament de Închiriat - Prezentare</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librăria oficială EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Berceni View Apartment</h1>
+            <p class="subtitle">Confort, liniște și acces rapid către punctele de interes</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Secțiunea de descriere -->
+        <section class="description-section">
+            <h2>Despre apartament</h2>
+            
+            <div class="apartment-description">
+                <p>Berceni View Apartment este situat la aproximativ 10 minute de mers pe jos de stația de metrou Apărătorii Patriei, aflată pe una dintre magistralele principale ale Bucureștiului, oferind acces rapid către principalele puncte de interes din oraș. Stațiile de autobuz se află la doar 3-5 minute de mers pe jos.</p>
+
+                <p>Proprietatea se află la doar jumătate de stație de metrou de Sun Plaza, unul dintre cele mai mari mall-uri din București, unde găsiți numeroase magazine, restaurante, cafenele și opțiuni de divertisment.</p>
+
+                <p>Un avantaj important al locației îl reprezintă apropierea de principalele instituții medicale din zonă. Apartamentul este situat vis-a-vis de Spitalul Clinic de Urgență Bagdasar-Arseni, Spitalul Clinic de Psihiatrie Prof. Dr. Alexandru Obregia, Spitalul de Boli Cronice Sfântul Luca și Institutul Național de Neurologie și Boli Neurovasculare, toate situate pe Șoseaua Berceni nr. 10-12, Sector 4.</p>
+
+                <p>De asemenea, în apropiere se află Spitalul Clinic de Urgență Sfântul Ioan și Spitalul Clinic de Urgență pentru Copii Marie Sklodowska Curie.</p>
+
+                <p>Această poziționare face apartamentul deosebit de potrivit pentru oricine își dorește cazare într-o zonă bine conectată la facilitățile orașului.</p>
+
+                <p>În imediata apropiere se găsesc magazine cu program non-stop și o farmacie, pentru un plus de confort și flexibilitate pe durata șederii.</p>
+
+                <p>Apartamentul este complet echipat și oferă toate facilitățile necesare pentru un sejur confortabil, inclusiv internet Wi-Fi și aer condiționat.</p>
+            </div>
+
+            <ul class="amenities">
+                <li><strong>Camere:</strong> 3 camere (1 dormitor pat dublu, 1 dormitor pat single, living), 1 baie cu dus, 1 baie fara dus</li>
+                <li><strong>Adresa:</strong> Strada Caporal Gheorghe Ion Nr. 11, bl 103 sc 1 apartament 26, Sector 4, București</li>
+                <li><strong>Facilități:</strong> Parcare gratuită, Wi-Fi, Aer Condiționat, Mașină de spălat</li>
+            </ul>
+        </section>
+
+        <!-- Galeria foto -->
+        <section class="gallery-section">
+            <h2>Galerie Foto</h2>
+            <p class="hint">Apasă pe orice fotografie pentru a o mări.</p>
+            
+            <div class="gallery-container">
+                <!-- Rândurile cu poze orizontale -->
+                <div class="horizontal-row">
+                    <img src="images/poza1.jpeg" alt="Dormitor matrimonial" class="gallery-item">
+                    <img src="images/poza3.jpeg" alt="Living spațios" class="gallery-item">
+                </div>
+
+                <div class="horizontal-row">
+                    <img src="images/poza2.jpeg" alt="Living vedere ansamblu" class="gallery-item">
+                    <img src="images/poza6.jpeg" alt="Bucătărie utilată" class="gallery-item">
+                </div>
+
+                <div class="horizontal-row">
+                    <img src="images/poza8.jpeg" alt="Bucătărie și zonă de luat masa" class="gallery-item">
+                    <img src="images/poza10.jpeg" alt="Baie modernă" class="gallery-item">
+                </div>
+
+                <div class="horizontal-row">
+                    <img src="images/poza12.jpeg" alt="Vedere panoramică Spital Bagdasar-Arseni" class="gallery-item">
+                    <img src="images/poza13.jpeg" alt="Vedere împrejurimi" class="gallery-item">
+                </div>
+
+                <!-- Rândurile cu poze verticale -->
+                <div class="vertical-row">
+                    <img src="images/poza4.jpeg" alt="Dormitor single" class="gallery-item">
+                    <img src="images/poza5.jpeg" alt="Hol intrare" class="gallery-item">
+                    <img src="images/poza7.jpeg" alt="Espressor cafea" class="gallery-item">
+                </div>
+
+                <div class="vertical-row">
+                    <img src="images/poza9.jpeg" alt="Mașină de spălat" class="gallery-item">
+                    <img src="images/poza11.jpeg" alt="Balcon închis" class="gallery-item">
+                    <img src="images/poza15.jpeg" alt="Loc de parcare" class="gallery-item">
+                </div>
+
+                <!-- Ultimele poze -->
+                <div class="horizontal-row">
+                    <img src="images/poza14.jpeg" alt="Zonă comercială și facilități" class="gallery-item">
+                    <img src="images/poza16.jpeg" alt="Intrarea în bloc / Farmacie" class="gallery-item">
+                </div>
+            </div>
+        </section>
+
+        <!-- Formularul de rezervare / solicitare -->
+        <section class="booking-section">
+            <h2>Verifică disponibilitatea</h2>
+            <p>Completează perioada dorită și numărul tău de telefon, iar noi te vom contacta în cel mai scurt timp.</p>
+            
+            <form id="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkin">Data sosirii (Check-in):</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkout">Data plecării (Check-out):</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Nume și prenume:</label>
+                    <input type="text" id="name" name="name" placeholder="Popescu Maria" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Numărul tău de telefon:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ex: 07123 456 789" required>
+                </div>
+
+                <button type="submit" id="submit-btn">Trimite solicitarea</button>
+                <p id="form-status" class="status-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Fereastra Modal unică (Lightbox) pentru mărirea imaginii la click -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Prezentare Apartament. Toate drepturile rezervate.</p>
+    </footer>
+
+    <!-- Scriptul principal inclus o singură dată, corect, la final -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+/* ==========================================
+   1. RESETARE ȘI CONFIGURĂRI DE BAZĂ
+   ========================================== */
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins");
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+@font-face {
+    font-family: 'Panetone';
+    src: url('panton/Panton-Trial-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #173b17; /* Fundalul verde al paginii */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   2. ANTET (HERO SECTION)
+   ========================================== */
+.hero {
+    background-image: linear-gradient(180deg, #e9e9c9 0%, #173b17 85%);
+    color: #f8f8ed;
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Poetsen One', sans-serif;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   3. SECȚIUNI GENERALE ȘI TITLURI
+   ========================================== */
+section {
+    background: #f8f8ed;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #173b17;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 10px;
+    font-family: 'Poetsen One', sans-serif;
+}
+
+/* ==========================================
+   4. LISTA DE FACILITĂȚI
+   ========================================== */
+.amenities {
+    list-style: none;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    color: #f8f8ed;
+}
+
+.amenities li {
+    background: #173b17;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+/* ==========================================
+   5. GALERIE FOTO (CÂTE 2 ORIZONTALE / CÂTE 3 VERTICALE)
+   ========================================== */
+.gallery-section {
+    background: #f8f8ed;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.gallery-section h2 {
+    color: #173b17;
+    margin-bottom: 5px;
+}
+
+.hint {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Forțează exact 2 poze pe rând */
+.horizontal-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Forțează exact 3 poze pe rând */
+.vertical-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Păstrează pozele 100% întregi, fără nicio tăiere */
+.gallery-item {
+    width: 100%;
+    height: auto !important;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Pe telefon (ecrane sub 600px), le punem pe o coloană ca să se vadă bine */
+@media (max-width: 600px) {
+    .horizontal-row, 
+    .vertical-row {
+        grid-template-columns: 1fr !important;
+    }
+}
+/* ==========================================
+   6. FORMULAR DE REZERVARE
+   ========================================== */
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2a5298;
+}
+
+button {
+    background-color: #173b17;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #225d22;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.status-message {
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status-success {
+    color: #27ae60;
+}
+
+.status-error {
+    color: #c0392b;
+}
+
+/* ==========================================
+   7. FEREASTRA MODAL (LIGHTBOX / ZOOM POZE)
+   ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 80vh;
+    border-radius: 6px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+#caption {
+    margin: 15px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* ==========================================
+   8. RESPONSIVITATE PENTRU TELEFOANE
+   ========================================== */
+@media (max-width: 768px) {
+    .horizontal-row, 
+    .vertical-row {
+        grid-template-columns: 1fr; /* Pe ecran mic, pozele trec pe o singură coloană */
+        gap: 15px;
+    }
+}
+
+/* ==========================================
+   9. SUBSOL (FOOTER)
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #f8f8ed;
+    font-size: 0.9rem;
+}
+/* Spațiere elegantă între paragrafele din descrierea apartamentului */
+.apartment-description p {
+    margin-bottom: 22px; /* Creează spațiul aerisit între idei */
+    line-height: 1.6;     /* Spațiul confortabil între rândurile aceluiași paragraf */
+    color: #333;          /* Culoarea textului */
+}
